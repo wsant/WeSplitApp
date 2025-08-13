@@ -1,35 +1,33 @@
-WeSplit
-Um aplicativo simples para dividir contas de restaurante e calcular gorjetas, construído com SwiftUI durante o curso "100 Days of SwiftUI" do Hacking with Swift.
+# 📱 WeSplit - Projeto 1 do "100 Days of SwiftUI"
 
-Visão Geral
-O WeSplit permite que você insira o valor total da conta, selecione a porcentagem da gorjeta e informe o número de pessoas para dividir a conta. O aplicativo calcula automaticamente o valor da gorjeta, o valor total da conta com a gorjeta e o valor que cada pessoa deve pagar.
+Este é o primeiro projeto prático desenvolvido durante o curso **[100 Days of SwiftUI](https://www.hackingwithswift.com/100/swiftui)** de Paul Hudson. O objetivo é construir um aplicativo funcional para iOS que calcula a divisão de uma conta de restaurante, incluindo gorjetas.
 
-Este foi o primeiro projeto prático realizado no curso, marcando o início da jornada de aprendizado no desenvolvimento de aplicativos iOS com SwiftUI.
+Este repositório serve como um registro do meu progresso e da aplicação dos conceitos fundamentais de Swift e SwiftUI aprendidos nos primeiros 15 dias do curso.
 
-Funcionalidades Principais
-Entrada do Valor da Conta: Campo de texto formatado para moeda, adaptado para a localidade do usuário (com dólar americano como padrão).
+## 🚀 Funcionalidades
 
-Seleção do Número de Pessoas: Picker para escolher o número de pessoas dividindo a conta.
+O aplicativo permite ao usuário:
 
-Seleção da Porcentagem da Gorjeta: Picker com opções de 0% a 100%, apresentado em uma nova tela para facilitar a escolha.
+* **Inserir o valor total da conta:** Um campo de texto formatado para a moeda local do usuário.
+* **Selecionar o número de pessoas:** Um seletor para dividir a conta entre 2 a 99 pessoas.
+* **Escolher a porcentagem de gorjeta:** Um seletor que abre uma nova tela com opções de 0% a 100%.
+* **Ver o cálculo em tempo real:**
+    * O valor total que cada pessoa deve pagar.
+    * O valor total da conta (valor original + gorjeta).
 
-Cálculo em Tempo Real: Os valores são recalculados automaticamente à medida que o usuário interage com os campos.
+## ✨ Destaques Técnicos
 
-Visualização do Valor por Pessoa: Exibe o valor que cada pessoa deve pagar.
+Este projeto foi uma introdução prática a vários dos pilares do SwiftUI:
 
-Visualização do Valor Total: Mostra o valor total da conta, incluindo a gorjeta.
+* **`@State` e `@FocusState`:** Para gerenciar o estado da aplicação de forma reativa, atualizando a interface automaticamente a cada mudança.
+* **Bindings de Mão Dupla (`$`):** Conectando os controles da UI (como `TextField` e `Picker`) diretamente às nossas propriedades `@State`.
+* **Views e Modificadores:** Utilização de `NavigationView`, `Form`, `Section`, `Picker` e `ForEach` para construir uma interface de usuário estruturada e com aparência nativa.
+* **Propriedades Computadas:** Isolamento da lógica de cálculo (`totalPerPerson`, `totalAmount`) do código da interface, tornando o `body` mais limpo e legível.
+* **Formatação de Dados:** Uso de `.currency` e `.percent` para apresentar os dados de forma amigável e localizada para o usuário.
 
-Teclado Numérico: O teclado apropriado é apresentado para a entrada do valor da conta.
+## 🛠️ Tecnologias Utilizadas
 
-Barra de Navegação: Apresenta o título "WeSplit" e um botão "Done" para fechar o teclado.
-
-Tecnologias Utilizadas
-SwiftUI
-
-Xcode
-
-Status do Projeto
-Concluído como parte do aprendizado inicial do curso "100 Days of SwiftUI".
-
-Próximos Passos
-Este projeto serviu como uma introdução aos conceitos fundamentais do SwiftUI. Os próximos passos incluem explorar recursos mais avançados do framework, aprofundar o entendimento do ciclo de vida das Views e construir interfaces de usuário mais complexas e interativas.
+```swift
+- Swift 5
+- SwiftUI
+- Xcode
